@@ -7,7 +7,7 @@ import java.util.*
 @Entity(
     tableName = "tasks"
 )
-data class Task(var title: String,var content: String, var date: Date) {
+data class Task(var title: String, var content: String, var date: Date) {
     @PrimaryKey(autoGenerate = true)
     var id: Int = 0
 

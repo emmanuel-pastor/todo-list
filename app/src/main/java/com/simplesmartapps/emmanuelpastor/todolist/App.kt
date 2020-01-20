@@ -3,7 +3,6 @@ package com.simplesmartapps.emmanuelpastor.todolist
 import android.app.Application
 import androidx.room.Room
 import com.simplesmartapps.emmanuelpastor.todolist.data.ToDoDatabase
-import java.util.concurrent.TimeUnit
 
 class App : Application() {
 

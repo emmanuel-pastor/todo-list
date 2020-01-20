@@ -36,7 +36,8 @@ class TaskAdapter() :
             holder.content.text = currentTask.content
 
             val taskDate = currentTask.date
-            val formattedTaskDate = java.text.SimpleDateFormat("dd/MM/yyyy", Locale.FRANCE).format(taskDate)
+            val formattedTaskDate =
+                java.text.SimpleDateFormat("dd/MM/yyyy", Locale.FRANCE).format(taskDate)
             holder.date.text = formattedTaskDate
 
             holder.id.text = currentTask.id.toString()
