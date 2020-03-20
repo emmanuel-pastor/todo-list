@@ -21,4 +21,6 @@ class TaskRepository {
     }
 
     fun getAllTasks() = mTaskDao.getAllTasks()
+
+    fun deleteAll() = mTaskDao.deleteAll()
 }
