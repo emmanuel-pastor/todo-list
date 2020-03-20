@@ -3,6 +3,7 @@ package com.simplesmartapps.emmanuelpastor.todolist
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
@@ -25,6 +26,12 @@ class MainActivity : AppCompatActivity() {
         mViewModel = ViewModelProvider(this).get(MyViewModel::class.java)
         mViewModel.getAllTasks().observe(this, Observer {
             adapter.updateList(it)
+
+            if (it.isEmpty()) {
+                no_tasks_layout.visibility = View.VISIBLE
+            } else {
+                no_tasks_layout.visibility = View.GONE
+            }
         })
 
         add_task_button.setOnClickListener {
